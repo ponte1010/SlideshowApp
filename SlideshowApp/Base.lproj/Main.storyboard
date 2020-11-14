@@ -15,37 +15,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pNG-5j-Ccc">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pNG-5j-Ccc">
                                 <rect key="frame" x="67" y="343" width="280" height="210"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="210" id="MIz-Z9-lCQ"/>
+                                </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="92a-YH-y3q" appends="YES" id="V4M-12-0iT"/>
+                                    <outletCollection property="gestureRecognizers" destination="92a-YH-y3q" appends="YES" id="HUE-gi-URL"/>
+                                    <outletCollection property="gestureRecognizers" destination="92a-YH-y3q" appends="YES" id="b1I-P4-Mie"/>
                                 </connections>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQ2-c2-oZM">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQ2-c2-oZM">
                                 <rect key="frame" x="67" y="561" width="31" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="31" id="MzY-b0-aY0"/>
+                                </constraints>
                                 <state key="normal" title="戻る"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yk3-xB-p75">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yk3-xB-p75">
                                 <rect key="frame" x="174" y="561" width="66" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="再生/停止"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOd-x3-BCf">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOd-x3-BCf">
                                 <rect key="frame" x="316" y="561" width="31" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="進む"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="yk3-xB-p75" firstAttribute="top" secondItem="sQ2-c2-oZM" secondAttribute="top" id="5PQ-tO-pBX"/>
+                            <constraint firstItem="pNG-5j-Ccc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="299" id="B0d-zL-ALU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pNG-5j-Ccc" secondAttribute="trailing" constant="67" id="B4l-RE-M78"/>
+                            <constraint firstItem="gOd-x3-BCf" firstAttribute="top" secondItem="sQ2-c2-oZM" secondAttribute="top" id="Kru-ca-Ddf"/>
+                            <constraint firstItem="yk3-xB-p75" firstAttribute="bottom" secondItem="sQ2-c2-oZM" secondAttribute="bottom" id="NaE-ed-gxr"/>
+                            <constraint firstItem="gOd-x3-BCf" firstAttribute="trailing" secondItem="pNG-5j-Ccc" secondAttribute="trailing" id="SBx-hg-KRM"/>
+                            <constraint firstItem="sQ2-c2-oZM" firstAttribute="leading" secondItem="pNG-5j-Ccc" secondAttribute="leading" id="aXF-Kj-vh3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sQ2-c2-oZM" secondAttribute="bottom" constant="271" id="anH-lP-c11"/>
+                            <constraint firstItem="pNG-5j-Ccc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="hD5-7C-TY2"/>
+                            <constraint firstItem="gOd-x3-BCf" firstAttribute="bottom" secondItem="sQ2-c2-oZM" secondAttribute="bottom" id="ke9-Dp-3iE"/>
+                            <constraint firstItem="sQ2-c2-oZM" firstAttribute="top" secondItem="pNG-5j-Ccc" secondAttribute="bottom" constant="8" id="uN9-KL-05d"/>
+                            <constraint firstItem="yk3-xB-p75" firstAttribute="centerX" secondItem="pNG-5j-Ccc" secondAttribute="centerX" id="ueV-xF-MAk"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="92a-YH-y3q">
                     <connections>
+                        <action selector="tapAction:" destination="BYZ-38-t0r" id="YO1-sE-xVj"/>
                         <segue destination="rOY-WC-imd" kind="show" id="JmK-iV-3Cz"/>
                     </connections>
                 </tapGestureRecognizer>
@@ -61,11 +80,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JVT-jj-mcm">
-                                <rect key="frame" x="1" y="267" width="412" height="309"/>
+                                <rect key="frame" x="20" y="20" width="374" height="750"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0WP-HP-nkF">
-                                <rect key="frame" x="192" y="584" width="31" height="30"/>
+                                <rect key="frame" x="192" y="778" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
