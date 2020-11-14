@@ -87,13 +87,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Rg-Uu-4Ea">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Rg-Uu-4Ea">
                                 <rect key="frame" x="20" y="20" width="374" height="750"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Rq-mm-I1T">
                                 <rect key="frame" x="130.5" y="778" width="153" height="30"/>
                                 <state key="normal" title="スライドショーに戻る"/>
                                 <connections>
+                                    <action selector="BackToSlideButton:" destination="1sS-V3-Agv" eventType="touchUpInside" id="4ZD-PB-6QE"/>
                                     <segue destination="8ZN-Qt-1CT" kind="unwind" unwindAction="unwind:" id="Zt8-YM-htG"/>
                                 </connections>
                             </button>

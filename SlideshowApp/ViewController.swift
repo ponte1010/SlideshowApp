@@ -98,13 +98,13 @@ class ViewController: UIViewController {
     
     // timeInterval: 2.0, repeats: true で指定した通り、2.0秒毎に画像がスライド
     @objc func changeImage() {
-        timer_sec += 1
-        
+    
         if (timer_sec == imageArray.count) {
             timer_sec = 0
         }
         
         ramenView.image = imageArray[timer_sec]
+        timer_sec += 1
     }
     
     // 遷移先から元の画面に戻ってくる時に必要
