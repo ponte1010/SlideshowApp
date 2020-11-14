@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     
     // tapAction
     @IBAction func tapAction(_ sender: Any) {
-        performSegue(withIdentifier: "ZoomViewController", sender: nil)
+        performSegue(withIdentifier: "zoom", sender: nil)
     }
     
     override func viewDidLoad() {

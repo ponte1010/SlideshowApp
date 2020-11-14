@@ -24,14 +24,13 @@
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="OKt-wH-df4" appends="YES" id="Hd8-2e-RyU"/>
-                                    <outletCollection property="gestureRecognizers" destination="OKt-wH-df4" appends="YES" id="04c-Qe-aQb"/>
                                 </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LNv-fk-8Ue">
                                 <rect key="frame" x="174" y="546" width="66" height="30"/>
                                 <state key="normal" title="再生/停止"/>
                                 <connections>
-                                    <action selector="playAndPause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8KV-7i-3Xd"/>
+                                    <action selector="playAndPauseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aPg-T4-PCb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4h-AK-Ptg">
@@ -41,14 +40,14 @@
                                 </constraints>
                                 <state key="normal" title="戻る"/>
                                 <connections>
-                                    <action selector="back:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JJk-t2-gDc"/>
+                                    <action selector="backButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wYB-zE-u8G"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="swZ-Zh-5CZ">
                                 <rect key="frame" x="296" y="546" width="31" height="30"/>
                                 <state key="normal" title="進む"/>
                                 <connections>
-                                    <action selector="Forward:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qFO-pB-VCD"/>
+                                    <action selector="nextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yzW-HU-GzO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -69,13 +68,12 @@
                     </view>
                     <connections>
                         <outlet property="ramenView" destination="0wq-YD-HhN" id="V1f-8O-2X7"/>
-                        <outlet property="tapAction" destination="OKt-wH-df4" id="M4I-67-Tny"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="OKt-wH-df4">
                     <connections>
-                        <segue destination="1sS-V3-Agv" kind="show" id="AYt-ab-YEl"/>
+                        <segue destination="1sS-V3-Agv" kind="show" identifier="zoom" id="AYt-ab-YEl"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
