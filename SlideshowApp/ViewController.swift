@@ -10,26 +10,105 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    // タイマー
+    var timer: Timer!
+    
+    // タイマー用の時間のための変数
+    var timer_sec: Int = 0
+    
+    // UIImageの配列
+    var imageArray:[UIImage] = [
+    UIImage(named: "img01.jpg")!,
+    UIImage(named: "img02.jpg")!,
+    UIImage(named: "img03.jpg")!
+    ]
+    
+    // UIImageView
     @IBOutlet weak var ramenView: UIImageView!
+    
+    // tapAction
+    @IBAction func tapAction(_ sender: Any) {
+        performSegue(withIdentifier: "ZoomViewController", sender: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     
-    @IBAction func unwind(_ segue: UIStoryboardSegue) {
-        // segueを使って戻ってきた時に呼ばれる
+    // 画像をスライドさせた時
+    func slide(for segue: UIStoryboardSegue, sender: Any?) {
+        let zoomViewController: ZoomViewController = segue.destination as! ZoomViewController
+        
+         // zoomViewController.image = imageArray[timer_sec]
+        
+            if self.timer != nil {
+                self.timer.invalidate()   // タイマーを停止する
+                self.timer = nil          // startTimer() の self.timer == nil で判断するために、 self.timer = nil としておく
+             
+             // playAndPauseButton.setTitle("再生", for: .normal)
+             // nextButton.isEnabled = true
+             // backButton.isEnabled = true
+        }
     }
     
     // "進む"ボタン
-    @IBAction func go(_ sender: Any) {
+    @IBAction func nextButton(_ sender: Any) {
+        if timer_sec == 0 {
+            timer_sec = 1
+        } else if timer_sec == 1 {
+            timer_sec = 2
+        } else if timer_sec == 2 {
+            timer_sec = 0
+        }
+        ramenView.image = imageArray[timer_sec]
     }
     
     // "戻る"ボタン
-    @IBAction func back(_ sender: Any) {
+    @IBAction func backButton(_ sender: Any) {
+        if timer_sec == 0 {
+            timer_sec = 2
+        } else if timer_sec == 1 {
+            timer_sec = 0
+        } else if timer_sec == 2 {
+            timer_sec = 1
+        }
+        ramenView.image = imageArray[timer_sec]
     }
     
-    @IBAction func playAndPause(_ sender: Any) {
+    // "再生/停止"ボタン
+    @IBAction func playAndPauseButton(_ sender: Any) {
+        
+        if(timer == nil) {
+            
+            timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(changeImage), userInfo: nil, repeats: true)
+            
+            // playAndPauseButton.setTitle("停止", for: .normal)
+            // nextButton.isEnabled = false
+            // backButton.isEnabled = false
+            
+        } else {
+            timer.invalidate()
+            timer = nil
+            // playAndPauseButton.setTitle("再生", for: .normal)
+            // nextButton.isEnabled = true
+            // backButton.isEnabled = true
+        }
+
+    }
+    
+    // timeInterval: 2.0, repeats: true で指定した通り、2.0秒毎に画像がスライド
+    @objc func changeImage() {
+        timer_sec += 1
+        
+        if (timer_sec == imageArray.count) {
+            timer_sec = 0
+        }
+        
+        ramenView.image = imageArray[timer_sec]
+    }
+    
+    // 遷移先から元の画面に戻ってくる時に必要
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
     }
     
 }
