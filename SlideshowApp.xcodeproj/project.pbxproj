@@ -14,6 +14,9 @@
 		188B98DF255DAF0600D4494E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188B98DD255DAF0600D4494E /* Main.storyboard */; };
 		188B98E1255DAF0800D4494E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 188B98E0255DAF0800D4494E /* Assets.xcassets */; };
 		188B98E4255DAF0800D4494E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188B98E2255DAF0800D4494E /* LaunchScreen.storyboard */; };
+		18C27643255FFD8000662A24 /* img02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18C27640255FFD8000662A24 /* img02.jpg */; };
+		18C27644255FFD8000662A24 /* img03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18C27641255FFD8000662A24 /* img03.jpg */; };
+		18C27645255FFD8000662A24 /* img01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18C27642255FFD8000662A24 /* img01.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		188B98E0255DAF0800D4494E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		188B98E3255DAF0800D4494E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		188B98E5255DAF0800D4494E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18C27640255FFD8000662A24 /* img02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img02.jpg; sourceTree = "<group>"; };
+		18C27641255FFD8000662A24 /* img03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img03.jpg; sourceTree = "<group>"; };
+		18C27642255FFD8000662A24 /* img01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img01.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,9 @@
 				183A2426255E54D0001B3290 /* ZoomViewController.swift */,
 				188B98DD255DAF0600D4494E /* Main.storyboard */,
 				188B98E0255DAF0800D4494E /* Assets.xcassets */,
+				18C27642255FFD8000662A24 /* img01.jpg */,
+				18C27640255FFD8000662A24 /* img02.jpg */,
+				18C27641255FFD8000662A24 /* img03.jpg */,
 				188B98E2255DAF0800D4494E /* LaunchScreen.storyboard */,
 				188B98E5255DAF0800D4494E /* Info.plist */,
 			);
@@ -130,7 +139,10 @@
 			files = (
 				188B98E4255DAF0800D4494E /* LaunchScreen.storyboard in Resources */,
 				188B98E1255DAF0800D4494E /* Assets.xcassets in Resources */,
+				18C27645255FFD8000662A24 /* img01.jpg in Resources */,
 				188B98DF255DAF0600D4494E /* Main.storyboard in Resources */,
+				18C27643255FFD8000662A24 /* img02.jpg in Resources */,
+				18C27644255FFD8000662A24 /* img03.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
