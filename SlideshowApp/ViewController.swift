@@ -9,9 +9,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    @IBAction func tapAction(_ sender: Any) {
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
