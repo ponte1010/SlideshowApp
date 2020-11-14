@@ -16,13 +16,6 @@ class ViewController: UIViewController {
     // タイマー用の時間のための変数
     var timer_sec: Int = 0
     
-    // UIImageの配列
-    var imageArray:[UIImage] = [
-    UIImage(named: "img01.jpg")!,
-    UIImage(named: "img02.jpg")!,
-    UIImage(named: "img03.jpg")!
-    ]
-    
     // UIImageView
     @IBOutlet weak var ramenView: UIImageView!
     
@@ -31,23 +24,35 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "zoom", sender: nil)
     }
     
+    // Outlet接続
+    @IBOutlet weak var playAndPauseButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
+    
+    // UIImageの配列
+    var imageArray:[UIImage] = [
+    UIImage(named: "img01.jpg")!,
+    UIImage(named: "img02.jpg")!,
+    UIImage(named: "img03.jpg")!
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     // 画像をスライドさせた時
-    func slide(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let zoomViewController: ZoomViewController = segue.destination as! ZoomViewController
         
-         // zoomViewController.image = imageArray[timer_sec]
+            zoomViewController.image = imageArray[timer_sec]
         
             if self.timer != nil {
                 self.timer.invalidate()   // タイマーを停止する
-                self.timer = nil          // startTimer() の self.timer == nil で判断するために、 self.timer = nil としておく
-             
-             // playAndPauseButton.setTitle("再生", for: .normal)
-             // nextButton.isEnabled = true
-             // backButton.isEnabled = true
+                self.timer = nil
+                
+             playAndPauseButton.setTitle("再生", for: .normal)
+             nextButton.isEnabled = true
+             backButton.isEnabled = true
         }
     }
     
@@ -82,16 +87,17 @@ class ViewController: UIViewController {
             
             timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(changeImage), userInfo: nil, repeats: true)
             
-            // playAndPauseButton.setTitle("停止", for: .normal)
-            // nextButton.isEnabled = false
-            // backButton.isEnabled = false
+            playAndPauseButton.setTitle("停止", for: .normal)
+            nextButton.isEnabled = false
+            backButton.isEnabled = false
             
         } else {
             timer.invalidate()
             timer = nil
-            // playAndPauseButton.setTitle("再生", for: .normal)
-            // nextButton.isEnabled = true
-            // backButton.isEnabled = true
+            
+            playAndPauseButton.setTitle("再生", for: .normal)
+            nextButton.isEnabled = true
+            backButton.isEnabled = true
         }
 
     }

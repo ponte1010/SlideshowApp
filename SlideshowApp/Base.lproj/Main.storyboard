@@ -27,8 +27,8 @@
                                 </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LNv-fk-8Ue">
-                                <rect key="frame" x="174" y="546" width="66" height="30"/>
-                                <state key="normal" title="再生/停止"/>
+                                <rect key="frame" x="191.5" y="546" width="31" height="30"/>
+                                <state key="normal" title="再生"/>
                                 <connections>
                                     <action selector="playAndPauseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aPg-T4-PCb"/>
                                 </connections>
@@ -67,6 +67,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="g4h-AK-Ptg" id="9Ek-Uu-Jpv"/>
+                        <outlet property="nextButton" destination="swZ-Zh-5CZ" id="gxj-Og-crf"/>
+                        <outlet property="playAndPauseButton" destination="LNv-fk-8Ue" id="2pY-lN-rf1"/>
                         <outlet property="ramenView" destination="0wq-YD-HhN" id="V1f-8O-2X7"/>
                     </connections>
                 </viewController>
@@ -113,7 +116,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="vw8-je-BtD"/>
                     <connections>
-                        <outlet property="ramenView" destination="0Rg-Uu-4Ea" id="Fz3-YZ-bcX"/>
+                        <outlet property="ramenView" destination="0Rg-Uu-4Ea" id="1Sc-iq-qoW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tkj-Xc-VA6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
