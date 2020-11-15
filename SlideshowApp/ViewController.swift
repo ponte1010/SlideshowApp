@@ -38,6 +38,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ramenView.image = imageArray[timer_sec]
     }
     
     // 画像をスライドさせた時
